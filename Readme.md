@@ -6,12 +6,6 @@
 
     npm install -g nodemon
 
-### dynamodb-admin is to monitor your DynamoDB
-
-    npm install -g dynamodb-admin
-
-    dynamodb-admin
-
 ## Run this project
 
 ### Copy envs

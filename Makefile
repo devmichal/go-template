@@ -7,19 +7,10 @@ hot:
 	nodemon --exec go run -mod=vendor cmd/main.go server $* --signal SIGTERM
 
 local-setup:
-	cat local/*.env > .env && cp docker-compose.override.yml.dist docker-compose.override.yml
+	cat .env.dist > .env
 
 vendor:
 	GOPRIVATE="gitlab.com/chemiq" go mod vendor
-
-lint-go:
-	@golangci-lint run ./...
-
-lint-yaml:
-	@yamllint .
-
-
-lint: lint-go lint-yaml
 
 clean:
 	rm -rf bin/
