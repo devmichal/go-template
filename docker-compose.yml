@@ -7,7 +7,7 @@ services:
         volumes:
             - ./:/app
         ports:
-            - "8010:8080"
+            - "${NOTIFICATION_PORT_TARGET}:8080"
         networks:
             - net
         depends_on:

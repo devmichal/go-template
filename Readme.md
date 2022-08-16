@@ -8,6 +8,10 @@
 
 ## Run this project
 
+### Init go project
+
+    go mode init name-of-your-projects
+
 ### Copy envs
 
     make local-setup
