@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+    notification:
+        image: golang
+        command: sleep infinity
+        volumes:
+            - ./:/app
+        ports:
+            - "8010:8080"
+        networks:
+            - net
+        depends_on:
+            -   db
+
+    db:
+        platform: linux/x86_64
+        image: postgres
+        restart: always
+        ports:
+            - "5442:5432"
+        networks:
+            - net
+
+networks:
+    net:
+        name: ${NETWORK_NAME}
+        driver: bridge
