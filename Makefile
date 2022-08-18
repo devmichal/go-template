@@ -10,7 +10,7 @@ local-setup:
 	cat .env.dist > .env
 
 vendor:
-	GOPRIVATE="gitlab.com/chemiq" go mod vendor
+	GOPRIVATE="github.com/chemiq/notification" go mod vendor
 
 clean:
 	rm -rf bin/
